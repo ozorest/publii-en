@@ -1,0 +1,30 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "zozo.log - en 🇺🇸 🇬🇧",
+    "description": "",
+    "home_page_url": "https://logs-en.zozo.dev.br",
+    "feed_url": "https://logs-en.zozo.dev.br/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Thiago (Zozô) Ozores 🇧🇷"
+    },
+    "items": [
+        {
+            "id": "https://logs-en.zozo.dev.br/diagrams-as-code.html",
+            "url": "https://logs-en.zozo.dev.br/diagrams-as-code.html",
+            "title": "Diagrams as Code",
+            "summary": "<p>Come, come, come and find out how to generate diagrams using Python code!!</p>\n",
+            "content_html": "<p>Come, come, come and find out how to generate diagrams using Python code!!</p>\n\n\n<p>In my day-to-day as an instructor, one of the jobs is to create diagrams that clearly illustrate the topic being presented to students, there are many good graphic tools online like [draw.io](https:/ /draw.io), <a href=\"https://www.lucidchart.com\">LucidChart</a>, among others.</p>\n<p>But despite these tools being very intuitive and easy to use, when you need to scale the creation of diagrams, need to create diagrams bringing information from external tools or even create simple diagrams quickly, you end up running into problems with formatting options and lack of automation of these tools, which make it difficult to create a “factory” of diagrams.</p>\n<p>Thinking about this scenario, Python has a package that can be used to represent and generate diagrams as code, facilitating the creation of this “factory”.</p>\n<p>The package is called <a href=\"https://diagrams.mingrammer.com\">diagrams</a> and it has a very interesting way of working, it makes use of Python’s operator overload to perform in a more intuitive way the connection that the nodes will have in diagram graphics. For example:</p>\n<ul>\n<li>The <code>&gt;&gt;</code> operator represents a right-to-left binding</li>\n<li>The <code>&lt;&lt;</code> operator represents a left-to-right binding</li>\n<li>The <code>-</code> operator represents a directionless binding</li>\n<li>And it’s still possible to make bidirectional bindings using the <code>Edge</code> class</li>\n</ul>\n<p>If you’re looking for a more programmatic way to generate diagrams, this package is worth checking out.</p>\n<p>Below are some examples I developed, which can be tested on <a href=\"https://colab.research.google.com/drive/1MrlVVFXAAMvuQJ8m-qkyY05wnurAl5uQ?usp=sharing\">Google Colab</a></p>\n<script src=\"https://gist.github.com/ozorest/c19718ac3d3bdcd0cbc3c8a96d093e48.js\"></script>",
+            "image": "https://logs-en.zozo.dev.br/media/posts/5/python-diagrama-3.png",
+            "author": {
+                "name": "Thiago (Zozô) Ozores 🇧🇷"
+            },
+            "tags": [
+                   "python",
+                   "diagrams"
+            ],
+            "date_published": "2022-05-05T13:22:00-03:00",
+            "date_modified": "2022-06-12T19:43:46-03:00"
+        }
+    ]
+}

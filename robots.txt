@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://logs-en.zozo.dev.br/sitemap.xml
