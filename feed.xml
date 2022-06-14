@@ -3,12 +3,67 @@
     <title>zozo.log - en 🇺🇸 🇬🇧</title>
     <link href="https://logs-en.zozo.dev.br/feed.xml" rel="self" />
     <link href="https://logs-en.zozo.dev.br" />
-    <updated>2022-06-12T19:43:46-03:00</updated>
+    <updated>2022-06-13T23:58:00-03:00</updated>
     <author>
         <name>Thiago (Zozô) Ozores 🇧🇷</name>
     </author>
     <id>https://logs-en.zozo.dev.br</id>
 
+    <entry>
+        <title>Running the Github Actions workflows locally</title>
+        <author>
+            <name>Thiago (Zozô) Ozores 🇧🇷</name>
+        </author>
+        <link href="https://logs-en.zozo.dev.br/running-the-github-actions-workflows-locally.html"/>
+        <id>https://logs-en.zozo.dev.br/running-the-github-actions-workflows-locally.html</id>
+            <category term="github"/>
+            <category term="docker"/>
+            <category term="cicd"/>
+
+        <updated>2022-06-13T23:58:00-03:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://logs-en.zozo.dev.br/media/posts/6/65916846.png" alt="" />
+                    <p><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="2"><span class="Q4iAWc">That's what you read!</span></span> <span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="1" data-number-of-phrases="2"><span class="Q4iAWc">Learn here how to run a Github Actions workflow without needing to push your code to the repository, right from your machine.</span></span></span></p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://logs-en.zozo.dev.br/media/posts/6/65916846.png" alt="" />
+                <p><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="2"><span class="Q4iAWc">That's what you read!</span></span> <span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="1" data-number-of-phrases="2"><span class="Q4iAWc">Learn here how to run a Github Actions workflow without needing to push your code to the repository, right from your machine.</span></span></span></p>
+
+<p><a href="https://logs-pt.zozo.dev.br/rodando-um-fluxo-do-github-actions-localmente.html">Em Português 🇧🇷 🇵🇹</a></p>
+<p><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="1"><span class="Q4iAWc">The tool that offers us this possibility to save time, not repeat ourselves (since I don't need to develop another local flow) and have a quick feedback (and also not spend the 2000 free minutes for nothing 😃), is called</span></span></span> <a href="https://github.com/nektos/act" title="act" target="_blank" rel="noopener noreferrer">act</a>.</p>
+<h3>How it works</h3>
+<p><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="2"><span class="Q4iAWc">It works by reading your yaml scripts from Github Actions contained in the <code>.github/workflows/</code> directory and using the Docker API to download the images corresponding to each action defined in the script and after determining the dependencies and the execution path, again it uses the</span></span> <span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="1" data-number-of-phrases="2"><span class="Q4iAWc">Docker API to execute actions using previously downloaded images.</span></span></span></p>
+<h3>Install</h3>
+<h4>Prerequisites</h4>
+<ul>
+<li><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="5"><span class="Q4iAWc">Docker engine installed (a bit obvious, huh 😃)</span></span></span><br>
+<ul>
+<li><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="2" data-number-of-phrases="5"><span class="Q4iAWc">Can I use podman or another engine?</span></span></span><br>
+<ul>
+<li><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="4" data-number-of-phrases="5"><span class="Q4iAWc">In the documentation, the developers say it might work, but they don't guarantee it, but for example, in my case I'm using podman without any problems, but I had to install the <strong>podman-docker</strong> package on my distro.</span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>Running the installation script</h4>
+<p><span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="1"><span class="Q4iAWc">To install on any distro (and Mac) just run the command below:</span></span></span></p>
+<pre>curl https://raw.githubusercontent.com/nektos/act/master/install.sh <span class="pl-k">|</span> sudo bash</pre>
+<p>For Windows, go the <a href="https://github.com/nektos/act/releases/latest" title="releases">releases</a> page of the project and download the zip file corresponding to your architecture</p>
+<h3>Example commands</h3>
+<pre><strong>act [&lt;event&gt;] [options]</strong><br># <span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="1"><span class="Q4iAWc">If no &lt;event&gt; is passed, it defaults to "on: push"</span></span></span><br><br><strong>act</strong><br># To run the workflow using the default event<br><br><strong>act -l</strong><br># List the event flows from the default event<br><br><strong>act workflow_dispatch -l</strong><br># Lists the workflows from the workflow_dispatch event (manual execution event within Github Actions)<br><br><strong>act pull_request</strong><br># Run the workflows related to pull_request event<br><br><strong>act workflow_dispatch</strong><br># Run the workflows related to the workflow_dispatch event<br><br><strong>act -j test</strong><br># Run a specific job from the default event<br><br><strong>act -n</strong><br># Runs in dry-run mode the default event<br><br><strong>act -v</strong><br># Run, enabling verbose mode of logs for the default event<br><br><strong>act -P &lt;image&gt;</strong><br># To change, if necessary, a standard image of an action<br><br><strong>act -s my_secret=abcde</strong><br># <span class="VIiyi" lang="en"><span class="JLqJ4b ChMk0b" data-language-for-alternatives="en" data-language-to-translate-into="pt" data-phrase-index="0" data-number-of-phrases="1"><span class="Q4iAWc">To simulate Github Actions secrets (you can also simulate creating a file called .secrets in the working directory, which is automatically read by act)</span></span></span></pre>
+<h3>Demo</h3>
+<p>
+<script id="asciicast-501439" src="https://asciinema.org/a/501439.js" async=""></script>
+</p>
+<p>In conclusion, in my opinion it is a must have tool for those who work day-to-day with Github Actions, of course not everything is perfect, not always it manages to simulate 100% of the environment's behavior, sometimes require adaptations and workarounds, but it for sure is a tool to have in your utility belt if you work with Github.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Diagrams as Code</title>
         <author>
@@ -19,7 +74,7 @@
             <category term="python"/>
             <category term="diagrams"/>
 
-        <updated>2022-06-12T19:43:46-03:00</updated>
+        <updated>2022-06-13T23:42:12-03:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://logs-en.zozo.dev.br/media/posts/5/python-diagrama-3.png" alt="" />
@@ -33,7 +88,8 @@
                 <p>Come, come, come and find out how to generate diagrams using Python code!!</p>
 
 
-<p>In my day-to-day as an instructor, one of the jobs is to create diagrams that clearly illustrate the topic being presented to students, there are many good graphic tools online like [draw.io](https:/ /draw.io), <a href="https://www.lucidchart.com">LucidChart</a>, among others.</p>
+<p><a href="https://logs-pt.zozo.dev.br/diagramas-como-codigo.html">Em Português 🇧🇷 🇵🇹</a></p>
+<p>In my day-to-day as an instructor, one of the jobs is to create diagrams that clearly illustrate the topic being presented to students, there are many good graphic tools online like <a href="https://draw.io">draw.io</a>, <a href="https://www.lucidchart.com">LucidChart</a>, among others.</p>
 <p>But despite these tools being very intuitive and easy to use, when you need to scale the creation of diagrams, need to create diagrams bringing information from external tools or even create simple diagrams quickly, you end up running into problems with formatting options and lack of automation of these tools, which make it difficult to create a “factory” of diagrams.</p>
 <p>Thinking about this scenario, Python has a package that can be used to represent and generate diagrams as code, facilitating the creation of this “factory”.</p>
 <p>The package is called <a href="https://diagrams.mingrammer.com">diagrams</a> and it has a very interesting way of working, it makes use of Python’s operator overload to perform in a more intuitive way the connection that the nodes will have in diagram graphics. For example:</p>
